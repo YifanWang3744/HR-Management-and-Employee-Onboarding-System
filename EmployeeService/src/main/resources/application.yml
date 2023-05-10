@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: employee-service
+  mvc:
+    servlet:
+      path: /employee-service # localhost:9000/employee-service
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2MB
+      max-file-size: 5MB
+      max-request-size: 10MB
+
+server:
+  port: 0  # setting to 0 will make the server choose a random port
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+
+cloud:
+  aws:
+    credentials:
+      access-key: AKIAUAWHVMS2BJ6HMCMM
+      secret-key: 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
+    region:
+      static: us-east-2
+    stack:
+      auto: false
+
+application:
+  bucket:
+    name: bf-team3-file
