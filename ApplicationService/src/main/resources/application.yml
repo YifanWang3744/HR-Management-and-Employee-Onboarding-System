@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: application-service
+  mvc:
+    servlet:
+      path: /application-service
+  servlet:
+    multipart:
+      enabled: true
+#      file-size-threshold: 2MB
+#      max-file-size: 5MB
+#      max-request-size: 10MB
+
+server:
+  port: 0
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+cloud:
+  aws:
+    credentials:
+      access-key: AKIAUAWHVMS2BNKTPFV3
+      secret-key: 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
+    region:
+      static: us-east-2
+    stack:
+      auto: false
+
+application:
+  bucket:
+    name: bf-team3-file
+
+
