@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: onboarding-service
+  mvc:
+    servlet:
+      path: /onboarding-service
+
+server:
+  port: 0
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+cloud:
+  aws:
+    credentials:
+      access-key: AKIAUAWHVMS2BNKTPFV3
+      secret-key: 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
+    region:
+      static: us-east-2
+    stack:
+      auto: false
+
+application:
+  bucket:
+    name: bf-team3-file
+
+security:
+  jwt:
+    token:
+      key: onBoardingSystem
