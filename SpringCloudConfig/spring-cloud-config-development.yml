@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: spring-cloud-config
+
+user:
+  username: test-username
